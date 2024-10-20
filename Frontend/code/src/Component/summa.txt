@@ -1,0 +1,62 @@
+import java.util.HashMap;
+
+public class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            int complement = target - nums[i];
+            if (map.containsKey(complement)) {
+                return new int[] { map.get(complement), i }; // Return indices
+            }
+            map.put(nums[i], i); // Store the number and its index
+        }
+
+        throw new IllegalArgumentException("No two sum solution");
+    }
+
+    public static void main(String[] args) {
+        if (args.length != 1) {
+            System.out.println("Please provide input in the format: numbers#target");
+            return;
+        }
+
+        // Example input: "3,2,4#6"
+        String input = args[0];
+        String[] parts = input.split("#");
+
+        if (parts.length != 2) {
+            System.out.println("Input must be in the format: numbers#target");
+            return;
+        }
+
+        String[] numStrings = parts[0].split(",");
+        
+        // Convert string array to int array
+        int[] nums = new int[numStrings.length];
+        try {
+            for (int i = 0; i < numStrings.length; i++) {
+                nums[i] = Integer.parseInt(numStrings[i].trim());
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid number format. Please provide integers.");
+            return;
+        }
+        
+        int target;
+        try {
+            target = Integer.parseInt(parts[1].trim());
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid target format. Please provide an integer.");
+            return;
+        }
+
+        Solution solution = new Solution();
+        try {
+            int[] result = solution.twoSum(nums, target);
+            System.out.println("[" + result[0] + ", " + result[1] + "]");
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
