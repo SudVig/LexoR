@@ -29,8 +29,8 @@ export const executeCode =async (language, sourceCode,cmdargs)=>
 
 const DB_API=axios.create(
   {
-    // baseURL:"http://127.0.0.1:8000/"
-    baseURL:"https://95lxh9ph-8000.inc1.devtunnels.ms/"
+     baseURL:"http://127.0.0.1:8000/"
+   
   }
 )
 
