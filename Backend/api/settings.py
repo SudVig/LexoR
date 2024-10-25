@@ -76,13 +76,13 @@ CORS_ALLOW_ALL_ORIGINS = True
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'codestorage',
-        'USER': 'root',
-        'PASSWORD': 'root',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'USER': 'codestorage_user',
+        'PASSWORD': 'lYZ1c3EbMrOk5dE9Gc33faTFNk5DQUqY',
+        'HOST': 'dpg-csdnm7d6l47c73de8geg-a.oregon-postgres.render.com',
+        'PORT': '5432',
     }
 }
 
