@@ -8,7 +8,7 @@ import './custom.css';
 
 
   const Output = ({ resp, iserr, isLoading, isRun, setRun, testcase, testCasepassed,totalTestCases }) => {
-  const sampleTestCases = testcase.filter(tc => tc.status === "hidden");
+  const sampleTestCases = testcase.filter(tc => tc.status === "sample");
   const [selectedChip, setSelectedChip] = useState(sampleTestCases[0]?.tid);
   const [currentTestCase, setCurrentTestCase] = useState(sampleTestCases[0]);
   const [currentIndex,setCurrentIndex]=useState(0);
