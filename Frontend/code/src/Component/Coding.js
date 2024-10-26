@@ -5,9 +5,12 @@ import { CODE_SNIPPETS } from './Constants/Constant';
 import { executeCode, getTestcaseById, savecode } from './Api';
 import { useParams } from 'react-router';
 import { getSnippetById } from './Api';
+import { UserContext } from '../../App';
+import { useContext } from 'react';
 
 function Coding() {  
-  const [userId,uid]=useState(1);
+  const { loginId, setloginid } = useContext(UserContext);
+  const [userId,uid]=useState(loginId);
   const { pblm_id } = useParams();
   const [qid, setqid] = useState(pblm_id);
   const [value, setValue] = useState("");
