@@ -105,7 +105,7 @@ function Coding() {
 
     
 
-    if(local===totalTestCases)
+   
 
     if(local===totalTestCases )
 
