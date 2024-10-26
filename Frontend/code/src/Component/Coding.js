@@ -5,7 +5,7 @@ import { CODE_SNIPPETS } from './Constants/Constant';
 import { executeCode, getTestcaseById, savecode } from './Api';
 import { useParams } from 'react-router';
 import { getSnippetById } from './Api';
-import { UserContext } from '../../App';
+import { UserContext } from '../App';
 import { useContext } from 'react';
 
 function Coding() {  
