@@ -104,7 +104,7 @@ function Coding() {
    
 
     
-    if(local===totalTestCases && totalTestCases!==0)
+    if(local===totalTestCases)
     {
       console.log("Going to savve")
       await savecode(Language,value,pblm_id,userId)
