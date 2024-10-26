@@ -24,6 +24,7 @@ const MyContextProvider=({children})=>{
 function App() {
   return (<>
   <MyContextProvider>
+  <title>LexoR</title>
     <Router>
       <Routes>
       <Route path="/" element={<Login/>}></Route>
