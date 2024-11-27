@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-k^qpl)tbaobnc6-1ba&90#s!4u0r(f@wx9wgl6z07=c=^qh1y_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['LexoR-1.onrender.com', 'localhost']
+ALLOWED_HOSTS = ['LexoR-1.onrender.com', '127.0.0.1']
 
 
 # Application definition
@@ -77,12 +77,15 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 DATABASES = {
         'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'codestorage',
-        'USER': 'codestorage_user',
-        'PASSWORD': 'lYZ1c3EbMrOk5dE9Gc33faTFNk5DQUqY',
-        'HOST': 'dpg-csdnm7d6l47c73de8geg-a.oregon-postgres.render.com',
-        'PORT': '5432',
+        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        # 'NAME': 'codestorage',
+        # 'USER': 'codestorage_user',
+        # 'PASSWORD': 'lYZ1c3EbMrOk5dE9Gc33faTFNk5DQUqY',
+        # 'HOST': 'dpg-csdnm7d6l47c73de8geg-a.oregon-postgres.render.com',
+        # 'PORT': '5432',
+
+         'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
