@@ -50,6 +50,7 @@ function Ide({
         settestcase={settestcase}
         testCasepassed={testCasepassed}
         totalTestCases={totalTestCases}
+        code={value}
       />
       <div style={{ width: '100%', height: '93vh' }}>
         <Editor 

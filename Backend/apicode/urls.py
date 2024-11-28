@@ -16,5 +16,6 @@ urlpatterns = [
     path('verify/<str:username>/<str:password>/', Userverification.as_view(), name='user-verification'),
     path('profile/<int:uid>/', Userprofile.as_view(), name='user-profile'),
      path('problem-status/<int:uid>/', ProblemStatus.as_view(), name='problem-status'),
-     path('issolved/<int:uid>/<int:pid>/',isSolved)
+     path('issolved/<int:uid>/<int:pid>/',isSolved),
+
 ]

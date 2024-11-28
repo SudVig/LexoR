@@ -113,8 +113,8 @@ function Coding() {
     if(local===totalTestCases )
 
     {
-      console.log("Going to savve"+userId)
-      await savecode(Language,value,pblm_id,userId,true)
+      console.log("Going to savve"+uid)
+      await savecode(Language,value,pblm_id,uid,true)
       console.log("Saved the code");
     }
   };
