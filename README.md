@@ -1,5 +1,7 @@
 # LexoR
 
+demo : https://lexo-r-lqmn.vercel.app/Home
+
 LexoR is an online coding platform designed to help users practice coding problems and enhance their programming skills. Built using **React.js** for the frontend and **Django** for the backend, LexoR provides an interactive and user-friendly environment for solving coding challenges.
 
 ## Features
